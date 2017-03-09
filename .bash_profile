@@ -56,4 +56,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 #gdal via KingChaos:
-export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+export PATH=/$PATH:Library/Frameworks/GDAL.framework/Programs
+
+#gdal & ogr2ogr shell scripts
+export PATH=/$PATH:Users/chrishenrick/shell_scripts
