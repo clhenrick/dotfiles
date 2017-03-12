@@ -51,12 +51,19 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-#rbenv
+# rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-#gdal via KingChaos:
+# gdal via KingChaos:
 export "PATH+=:/Library/Frameworks/GDAL.framework/Programs"
 
-#gdal & ogr2ogr shell scripts
-export "PATH+=:$HOME/shell_scripts/"
+# gdal & ogr2ogr shell scripts
+export "PATH+=:$HOME/shell_scripts"
+
+# php71 installed via homebrew for php71, see: https://php-osx.liip.ch/
+# brew tap homebrew/dupes
+# brew tap homebrew/versions
+# brew tap homebrew/homebrew-php
+# brew install php71 --with-postgresql --with-homebrew-curl
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
